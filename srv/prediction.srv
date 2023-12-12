@@ -1,0 +1,10 @@
+int64 t
+int64 gaze
+float64 hand_x
+float64 hand_y
+int64 grip 
+float64 P_t1_old
+float64 P_t2_old 
+---
+float64 P_t1
+float64 P_t2
