@@ -1,0 +1,25 @@
+<launch>
+	<node 	pkg="cr_cw2_gaze_based_prediction"
+		name="data_logger" 
+		type="data_logger.py"
+		output="screen"		/>
+	
+	<node 	pkg="cr_cw2_gaze_based_prediction"
+		name="target_prediction" 
+		type="target_prediction.py"	/>
+	
+	<node 	pkg="cr_cw2_gaze_based_prediction"
+		name="controller" 
+		type="controller.py"		/>
+	
+	<node 	pkg="cr_cw2_gaze_based_prediction"
+		name="update_human" 
+		type="update_human.py"
+		args="is_random"		/>
+	
+	<node 	pkg="rqt_plot" 
+		name="lifetime_accuracy_plot" 
+		type="rqt_plot"
+		args="/lifetime_accuracy" 	/>
+	
+</launch>
